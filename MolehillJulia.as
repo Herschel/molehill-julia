@@ -431,8 +431,11 @@ package
 		
 		private function onResize(event:Event):void
 		{
-			_resizeTimer.reset();
-			_resizeTimer.start();
+			if (_resizeTimer)
+			{
+				_resizeTimer.reset();
+				_resizeTimer.start();
+			}
 		}
 
 		private function onResizeTimer(event:Event):void
